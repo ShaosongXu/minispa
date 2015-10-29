@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Delete Note";
+}
+
+<table><tr><td height="10px"></td></tr></table>
+
+<table cellpadding="4" cellspacing="4" align="center" style="width:70%; background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <tr><td colspan="2" style="background-color:gray; font-size:18pt; font-weight:bold; height:30px; text-align:center;">Delete Employee Note</td></tr>
+    <tr>
+        <td style="width:15%; text-align:right;">NoteID #</td>
+        <td style="width:auto">{{Note.noteID}}</td>
+    </tr>
+    <tr>
+        <td style="width:15%; text-align:right;">Description #</td>
+        <td style="width:auto">{{Note.description}}</td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">
+            <button data-ng-click="delete(Note.noteID)" type="button" class="btn btn-warning">
+                Delete
+            </button>
+            <br />
+            <div>{{error}}</div>
+        </td>
+        <td></td>
+    </tr>
+
+</table>

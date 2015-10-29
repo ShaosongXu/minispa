@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>NoteID</th>
+                        <th>Description</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="note in Notes">
+                        <td style="width: auto">{{note.noteID}}</td>
+                        <td style="width: auto">{{note.description}}</td>
+                        <td><a ng-click="editNote(note.noteID)">Edit</a></td>
+                        <td><a ng-click="deleteNote(note.noteID)">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>      

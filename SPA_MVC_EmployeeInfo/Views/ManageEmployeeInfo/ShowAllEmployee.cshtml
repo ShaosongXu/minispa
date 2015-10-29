@@ -1,0 +1,34 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-body">
+        <table  class="table" >
+            <thead>
+                <tr style="background-color:#F5F5F5;">
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Photo</th>
+                    <th>Email</th>
+                    <th>Hired Year</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="emp in Employees">
+                    <td>{{emp.employeeID}}</td>
+                    <td>{{emp.name}}</td>
+                    <td><img ng-src="{{ 'uploads/'+ emp.imgUrl }}" height="40" width="40" /></td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.hiredYear}}</td>
+                    <td>{{emp.city}}</td>
+                    <td>{{emp.country}}</td>
+                    <td><a href="@Url.Action("Index", "ManageEmployeeNote")/?id={{emp.employeeID}}" target="_self">Note</a></td>
+                    <td><a ng-click="editEmployee(emp.employeeID)">Edit</a></td>
+                    <td><a ng-click="deleteEmployee(emp.employeeID)">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "SPA";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body data-ng-app="App">
+    <div>
+        <div>
+            <div class="panel-body">
+                <table class="table" style="width: auto;">
+                    <tr>
+                        <td style="border: solid 1px gray; width:auto; text-align:center;"><a href="shownotes"> Show All Notes </a></td>
+                        <td style="border: solid 1px gray; width:auto; text-align:center;"><a href="addnote"> Add New Note </a></td>
+                        <td style="border: solid 1px gray; width:auto; text-align:center;"><a href="@Url.Action("Index", "ManageEmployeeInfo")" target="_self">Employees</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div data-ng-view></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/App.js")"></script>
+    <script src="~/MyScripts/Services.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowNotesController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/AddNoteController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/EditNoteController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteNoteController.js")"></script>
+    <script>
+        window.app.value('empId', @ViewBag.empId);
+    </script>
+}

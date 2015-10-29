@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Delete Employee";
+}
+
+<table><tr><td height="10px"></td></tr></table>
+
+<table cellpadding="4" cellspacing="4" width="70%" align="center" style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <tr><td colspan="2" style="background-color:gray; font-size:18pt; font-weight:bold; height:30px; text-align:center;">Delete Employee Information</td></tr>
+    <tr>
+        <td style="text-align:right;">Employee ID</td>
+        <td>{{Employee.employeeID}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Name # </td>
+        <td> {{Employee.name}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Photo # </td>
+        <td> <img ng-src="{{ 'uploads/'+ Employee.imgUrl }}" height="40" width="40" />  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Email # </td>
+        <td>{{Employee.email}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Hired Year # </td>
+        <td>{{Employee.hiredYear}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">City # </td>
+        <td>{{Employee.city}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Country # </td>
+        <td>{{Employee.country}}  </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button data-ng-click="delete(Employee.imgUrl)" type="button" class="btn btn-warning">
+                Delete
+            </button>
+        </td>
+    </tr>
+</table>

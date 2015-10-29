@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "SPA";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body data-ng-app="App">
+    <div class="panel-body">
+        <div>
+            <div>
+                 <table class="table" style="width: auto;">
+                    <tr>
+                        <td style="width: auto; border: solid 1px gray; text-align:center;"><a href="showemployees"> Show All Employees </a></td>
+                        <td style="width: auto; border: solid 1px gray; text-align:center;"><a href="addemployee"> Add New Employee </a></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div data-ng-view></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/App.js")"></script>
+    <script src="~/MyScripts/Services.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowEmployeesController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/AddEmployeeController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/EditEmployeeController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteEmployeeController.js")"></script>
+}

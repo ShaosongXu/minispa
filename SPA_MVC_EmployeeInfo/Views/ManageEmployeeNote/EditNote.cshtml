@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Edit Note";
+}
+<table><tr><td height="10px"></td></tr></table>
+
+<table cellpadding="4" cellspacing="4" align="center" style="width:70%; background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <tr><td colspan="2" style="background-color:gray; font-size:18pt; font-weight:bold; height:30px; text-align:center;">Edit Note</td></tr>
+    <tr>
+        <td style="width:auto; text-align:right;">Description</td>
+        <td style="width:100%"><textarea class="form-control" style="min-width: 100%" ng-model="Note.description"></textarea></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button data-ng-click="save()" type="button" class="btn btn-primary">
+                Save
+            </button>
+            <div>{{error}}</div>
+        </td>
+    </tr>
+
+</table>
