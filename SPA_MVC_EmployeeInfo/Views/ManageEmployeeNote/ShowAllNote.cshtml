@@ -14,8 +14,8 @@
                     <tr data-ng-repeat="note in Notes">
                         <td style="width: auto">{{note.noteID}}</td>
                         <td style="width: auto">{{note.description}}</td>
-                        <td><a ng-click="editNote(note.noteID)">Edit</a></td>
-                        <td><a ng-click="deleteNote(note.noteID)">Delete</a></td>
+                        <td><a ng-click="editNote(note.noteID)"><span class="glyphicon glyphicon-edit">Edit</span></a></td>
+                        <td><a ng-click="deleteNote(note.noteID)"><span class="glyphicon glyphicon-trash"></span></a></td>
                     </tr>
                 </tbody>
             </table>

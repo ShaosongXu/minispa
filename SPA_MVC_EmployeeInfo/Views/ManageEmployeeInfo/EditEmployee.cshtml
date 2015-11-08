@@ -3,7 +3,7 @@
 }
 <table><tr><td height="10px"></td></tr></table>
 
-<table cellpadding="4" cellspacing="4" width="70%" align="center" style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+<table cellpadding="4" cellspacing="4" align="center" style="width:70%; background-color: skyblue; border:solid 2px red; padding-top:20px;">
     <tr><td colspan="2" style="background-color:gray; font-size:18pt; font-weight:bold; height:30px; text-align:center;">Edit Employee Information</td></tr>
     <tr>
         <td style="text-align:right;">Name</td>
@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td style="text-align:right;">Image</td>
-        <td><img ng-src="{{ thumbnail.dirty? thumbnail.dataUrl : 'uploads/'+ Employee.imgUrl}}" height="40" width="40" /><input type="file" name="file" onchange="angular.element(this).scope().photoChanged(this.files)" /></td>
+        <td><img ng-src="{{ thumbnail.dirty? thumbnail.dataUrl : 'uploads/'+ Employee.imgUrl}}" height="40" width="40" class="img-circle"/><input type="file" name="file" onchange="angular.element(this).scope().photoChanged(this.files)" /></td>
     </tr>
     <tr>
         <td style="text-align:right;">Email</td>

@@ -19,14 +19,14 @@
                 <tr data-ng-repeat="emp in Employees">
                     <td>{{emp.employeeID}}</td>
                     <td>{{emp.name}}</td>
-                    <td><img ng-src="{{ 'uploads/'+ emp.imgUrl }}" height="40" width="40" /></td>
+                    <td><img ng-src="{{ 'uploads/'+ emp.imgUrl }}" height="40" width="40" class="img-circle"/></td>
                     <td>{{emp.email}}</td>
                     <td>{{emp.hiredYear}}</td>
                     <td>{{emp.city}}</td>
                     <td>{{emp.country}}</td>
-                    <td><a href="@Url.Action("Index", "ManageEmployeeNote")/?id={{emp.employeeID}}" target="_self">Note</a></td>
-                    <td><a ng-click="editEmployee(emp.employeeID)">Edit</a></td>
-                    <td><a ng-click="deleteEmployee(emp.employeeID)">Delete</a></td>
+                    <td><a href="@Url.Action("Index", "ManageEmployeeNote")/?id={{emp.employeeID}}" target="_self"><span class="glyphicon glyphicon-pencil">Note</span></a></td>
+                    <td><a ng-click="editEmployee(emp.employeeID)"><span class="glyphicon glyphicon-edit">Edit</span></a></td>
+                    <td><a ng-click="deleteEmployee(emp.employeeID)"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             </tbody>
         </table>
